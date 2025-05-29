@@ -20,10 +20,23 @@ export default defineConfig([
     },
     rules: {
       ...js.configs.recommended.rules,
-
       "no-console": "warn",
-      semi: ["error", "always"],
+      "semi": ["error", "always"],
       "prettier/prettier": "error",
+    },
+  },
+
+  {
+    files: ["webpack.*.js"],
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "commonjs",
+      globals: globals.node,
+    },
+    rules: {
+      "no-undef": "off",           
+      "no-unused-vars": "warn",    
+      "prettier/prettier": "error" 
     },
   },
 
