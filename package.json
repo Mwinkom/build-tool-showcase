@@ -57,5 +57,8 @@
     "**/*.{json,css,scss,md,html}": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "moment": "^2.30.1"
   }
 }
