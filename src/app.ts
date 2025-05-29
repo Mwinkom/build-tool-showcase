@@ -1,4 +1,6 @@
 //Handle rendering of tools in the tool list
+import moment from "moment";
+
 export function renderTools(tools: { name: string; description: string }[]) {
   const toolList = document.getElementById("tool-list") as HTMLElement;
 
@@ -22,4 +24,10 @@ export function setupThemeToggle() {
     icon?.classList.toggle("fa-sun");
     icon?.classList.toggle("fa-moon");
   });
+}
+
+// Set current year in footer
+const yearSpan = document.getElementById("year");
+if (yearSpan) {
+  yearSpan.textContent = moment().format("YYYY");
 }
