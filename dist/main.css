@@ -1,0 +1,77 @@
+body {
+  background-color: #f9f9f9;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  font-family: Manrope, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+body.dark {
+  background-color: #1e1e1e;
+  color: #f9f9f9;
+}
+body.dark #tool-list .tool-card {
+  background-color: #333;
+}
+body.dark footer {
+  background-color: #3f3f3f;
+  color: #9d9d9d;
+}
+header {
+  align-items: center;
+  background-color: #6e00db;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+header h1 {
+  font-size: 1.5rem;
+}
+header #theme-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.2s ease-in;
+}
+header #theme-toggle:hover {
+  color: #13efef;
+}
+main {
+  flex: 1;
+  padding: 2rem 2rem 4rem;
+}
+main h2 {
+  font-weight: 800;
+  text-align: center;
+}
+main #tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+  justify-content: center;
+}
+main #tool-list .tool-card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 250px;
+}
+main #tool-list .tool-card h3 {
+  color: #6e00db;
+}
+footer {
+  background-color: #eaeaea;
+  color: #727070;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 1rem;
+  text-align: center;
+}

@@ -7,6 +7,7 @@ import { defineConfig } from "eslint/config";
 export default defineConfig([
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
+    ignores: ["dist/**/*", "node_modules/**/*", "coverage/**/*"],
     languageOptions: {
       parserOptions: {
         ecmaVersion: "latest",
@@ -27,7 +28,7 @@ export default defineConfig([
   },
 
   {
-    files: ["webpack.*.js"],
+    files: ["webpack.*.js","jest.config.js"],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "commonjs",
@@ -39,6 +40,16 @@ export default defineConfig([
       "prettier/prettier": "error" 
     },
   },
-
+  {
+  files: ["**/__tests__/**/*.test.ts"],
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "module",
+      globals: {
+        ...globals.browser,
+        ...globals.jest 
+      },
+    },
+  },
   tseslint.configs.recommended[0],
 ]);
