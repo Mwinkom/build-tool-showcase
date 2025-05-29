@@ -1,6 +1,7 @@
 import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
+import prettier from "eslint-plugin-prettier";
 import { defineConfig } from "eslint/config";
 
 export default defineConfig([
@@ -9,20 +10,22 @@ export default defineConfig([
     languageOptions: {
       parserOptions: {
         ecmaVersion: "latest",
-        sourceType: "module"
+        sourceType: "module",
       },
       globals: globals.browser,
     },
     plugins: {
-      js
+      js,
+      prettier,
     },
     rules: {
       ...js.configs.recommended.rules,
 
       "no-console": "warn",
-      "semi": ["error", "always"]
-    }
+      semi: ["error", "always"],
+      "prettier/prettier": "error",
+    },
   },
 
-  tseslint.configs.recommended[0]
+  tseslint.configs.recommended[0],
 ]);
