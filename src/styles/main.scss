@@ -1,8 +1,8 @@
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
 
 body {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   background-color: $light-bg;
   color: $light-text;
   margin: 0;
@@ -16,18 +16,16 @@ body {
     background-color: $dark-bg;
     color: $dark-text;
 
-      #tool-list .tool-card {
-        background-color: $dark-accent;
-      }
+    #tool-list .tool-card {
+      background-color: $dark-accent;
+    }
 
-      footer{
-        background-color: $footer-dark-accent;
-        color: $footer-dark-text;
-      }
+    footer {
+      background-color: $footer-dark-accent;
+      color: $footer-dark-text;
+    }
   }
 }
-
-
 
 header {
   @include center;
@@ -46,10 +44,10 @@ header {
     color: white;
     font-size: 1.2rem;
     cursor: pointer;
-    transition: all ease-in 0.2s ;
+    transition: all ease-in 0.2s;
   }
- 
-  #theme-toggle:hover{
+
+  #theme-toggle:hover {
     color: rgb(19, 239, 239);
   }
 }
