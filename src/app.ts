@@ -1,6 +1,6 @@
-//Handle rendering of tools in the tool list
 import moment from "moment";
 
+//Handle rendering of tools in the tool list
 export function renderTools(tools: { name: string; description: string }[]) {
   const toolList = document.getElementById("tool-list") as HTMLElement;
 
