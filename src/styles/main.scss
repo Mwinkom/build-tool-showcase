@@ -18,6 +18,11 @@ body {
 
     #tool-list .tool-card {
       background-color: $dark-accent;
+
+      h3 {
+        color: $purple-dark-accent;
+        font-weight: 600;
+      }
     }
 
     footer {
@@ -33,6 +38,12 @@ header {
   padding: 1rem 2rem;
   background-color: $accent;
   color: white;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
 
   h1 {
     font-size: 1.5rem;
